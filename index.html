@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simbulan Project Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <section id="login-screen" class="login-screen">
+      <div class="login-panel">
+        <img src="Imageslogo/lgo.png" class="login-logo" alt="Simbulan logo" />
+        <div class="login-heading">
+          <p>Welcome to</p>
+          <h1>SIMBULAN</h1>
+        </div>
+
+        <form id="login-form" class="login-form" autocomplete="on">
+          <label for="email">Username or Email Address</label>
+          <div class="input-wrap">
+            <input id="email" name="email" type="text" placeholder="Your Email/Username" required />
+            <span aria-hidden="true"><i class="bx bx-id-card"></i></span>
+          </div>
+
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <input id="password" name="password" type="password" placeholder="********************" required />
+            <button id="toggle-password" class="icon-button" type="button" aria-label="Show password"><i class="bx bx-show"></i></button>
+          </div>
+
+          <div class="login-options">
+            <label class="check"><input type="checkbox" /> Remember me?</label>
+            <button type="button">Forget Password</button>
+          </div>
+
+          <p id="login-error" class="login-error" role="alert"></p>
+          <button class="primary-button" type="submit">LOGIN</button>
+        </form>
+        <div class="demo-accounts" aria-label="Demo accounts">
+          <strong>Demo access</strong>
+          <span>kim / Simbulan2026 - Project Manager</span>
+          <span>anton / Simbulan2026 - Designer</span>
+          <span>park / Simbulan2026 - Installer</span>
+        </div>
+      </div>
+
+      <div class="pic-holder"><aside class="company-placeholder" aria-label="Company picture placeholder"></aside> </div>
+    </section>
+
+    <section id="workspace" class="workspace hidden">
+      <header class="topbar">
+        <div class="app-brand">
+          <img src="Imageslogo/lgo.png" class="app-logo" alt="Simbulan logo" />
+          <strong>SIMBULAN</strong>
+        </div>
+        <div class="user-profile">
+          <div class="avatar-photo"></div>
+          <div><strong id="profile-name">Kim Sohee</strong><small id="profile-role">Project Manager</small></div>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="dashboard" title="Dashboard"><i class="bx bx-grid-alt"></i></button>
+          <button class="nav-item" data-view="projects" title="Projects"><i class="bx bx-folder-open"></i></button>
+          <button class="nav-item" data-view="tasks" title="Tasks"><i class="bx bx-clipboard"></i></button>
+          <button class="nav-item" data-view="costs" title="Cost Allocation"><i class="bx bx-dollar-circle"></i></button>
+          <button class="nav-item" data-view="reports" title="Reports"><i class="bx bx-bar-chart-square"></i></button>
+        </nav>
+        <button id="logout-button" class="logout" title="Log out">-></button>
+      </aside>
+
+      <div class="main-content">
+        <div id="view-root" class="view-root"></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
