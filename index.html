@@ -14,7 +14,7 @@
   <main id="app" class="app-shell">
     <section id="login-screen" class="login-screen">
       <div class="login-panel">
-        <img src="Imageslogo/lgo.png" class="login-logo" alt="Simbulan logo" />
+        <img src="lgo.png" class="login-logo" alt="Simbulan logo" />
         <div class="login-heading">
           <p>Welcome to</p>
           <h1>SIMBULAN</h1>
@@ -30,7 +30,7 @@
           <label for="password">Password</label>
           <div class="input-wrap">
             <input id="password" name="password" type="password" placeholder="********************" required />
-            <button id="toggle-password" class="icon-button" type="button" aria-label="Show password"><i class="bx bx-show"></i></button>
+            <button id="toggle-password" class="icon-button" type="button" aria-label="Show password"><i class="bx bx-lock-alt"></i></button>
           </div>
 
           <div class="login-options">
@@ -49,22 +49,42 @@
         </div>
       </div>
 
-      <div class="pic-holder"><aside class="company-placeholder" aria-label="Company picture placeholder"></aside> </div>
+      <div class="pic-holder">
+        <aside class="company-placeholder" aria-label="Company showcase">
+          <img src="lgo.png" class="showcase-logo" alt="" />
+          <div class="showcase-text">
+            <h2>Interior design &amp; furniture solutions.</h2>
+            <p>Simbulan project workspace</p>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <section id="workspace" class="workspace hidden">
       <header class="topbar">
         <div class="app-brand">
-          <img src="Imageslogo/lgo.png" class="app-logo" alt="Simbulan logo" />
+          <img src="lgo.png" class="app-logo" alt="Simbulan logo" />
           <strong>SIMBULAN</strong>
         </div>
-        <div class="user-profile">
-          <div class="avatar-photo"></div>
+        <div class="user-profile" id="profile-trigger" style="cursor:pointer;position:relative;">
+          <div class="avatar-photo" id="topbar-avatar">KS</div>
           <div><strong id="profile-name">Kim Sohee</strong><small id="profile-role">Project Manager</small></div>
+          <div id="profile-dropdown" class="profile-dropdown hidden">
+            <div class="profile-dropdown-header">
+              <div class="avatar-photo" id="dropdown-avatar">KS</div>
+              <div><strong id="dropdown-name">Kim Sohee</strong><small id="dropdown-role">Project Manager</small></div>
+            </div>
+            <div class="profile-dropdown-info">
+              <div class="profile-info-row"><i class="bx bx-envelope"></i><span id="dropdown-email">kim@simbulan.com</span></div>
+              <div class="profile-info-row"><i class="bx bx-id-card"></i><span id="dropdown-username">kim</span></div>
+            </div>
+            <button id="dropdown-logout" class="profile-dropdown-logout" type="button"><i class="bx bx-log-out"></i> Log out</button>
+          </div>
         </div>
       </header>
 
       <aside class="sidebar">
+        <img src="lgo.png" class="sidebar-logo" alt="Simbulan logo" />
         <nav id="main-nav" class="main-nav" aria-label="Main navigation">
           <button class="nav-item active" data-view="dashboard" title="Dashboard"><i class="bx bx-grid-alt"></i></button>
           <button class="nav-item" data-view="projects" title="Projects"><i class="bx bx-folder-open"></i></button>
@@ -72,7 +92,7 @@
           <button class="nav-item" data-view="costs" title="Cost Allocation"><i class="bx bx-dollar-circle"></i></button>
           <button class="nav-item" data-view="reports" title="Reports"><i class="bx bx-bar-chart-square"></i></button>
         </nav>
-        <button id="logout-button" class="logout" title="Log out">-></button>
+        <button id="logout-button" class="logout" title="Log out"><i class="bx bx-log-out"></i></button>
       </aside>
 
       <div class="main-content">
